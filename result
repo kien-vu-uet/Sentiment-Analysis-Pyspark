@@ -1,0 +1,47 @@
+ACC
+
+tokenizer + hashingIDF + IDF + logistic(5) = 0.62
+tokenizer + snowball stem + hashingIDF + IDF + logistic(5) = 0.62
+tokenizer + snowball stem + word2vec(100) + logistic(5) = 0.63
+
+
+tokenizer + stopword remover + snowball stem + hashingIDF + IDF + logistic(2) = 0.82
+tokenizer + stopword remover + snowball stem + hashingIDF + IDF + naive bayes(2) = 0.78
+tokenizer + stopword remover + snowball stem + hashingIDF + IDF + svm(2) = 0.80
+
+
+tokenizer + stopword remover + snowball stem + word2vec(100) + logistic(2) = 0.85
+tokenizer + stopword remover + snowball stem + word2vec(100) + svm(2) = 0.84
+
+
+
+tokenizer + stopword remover + ngram(1,2) + IDF + naive bayes(2) = 0.82
+tokenizer + stopword remover + ngram(1,2) + IDF + logistic(2) = 0.88
+tokenizer + stopword remover + ngram(1,2) + IDF + svm(2) = 0.88
+
+
+pretrained on twitter = 0.73
+pretrained on imdb = 0.83
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+F1
+
+
+tokenizer + stopword remover + snowball stem + hashingIDF + IDF + logistic(2) = 0.77
+tokenizer + stopword remover + snowball stem + hashingIDF + IDF + naive bayes(2) = 0.79
+tokenizer + stopword remover + snowball stem + hashingIDF + IDF + svm(2) = 0.78
+
+
+tokenizer + stopword remover + snowball stem + word2vec(100) + logistic(2) = 0.85
+tokenizer + stopword remover + snowball stem + word2vec(100) + svm(2) = 0.84
+
+
+tokenizer + stopword remover + ngram(1,2) + IDF + naive bayes(2) = 0.83
+tokenizer + stopword remover + ngram(1,2) + IDF + logistic(2) = 0.87
+tokenizer + stopword remover + ngram(1,2) + IDF + svm(2) = 0.88
+
+
+pretrained on twitter = 0.75
+pretrained on imdb = 0.82

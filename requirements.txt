@@ -1,0 +1,5 @@
+pyspark=3.0.0
+spark-nlp=3.0.0
+nltk
+pandas
+# jdk 11 (manual install)
