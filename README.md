@@ -37,7 +37,7 @@ hdfs dfs -copyFromLocal /path/to/local/data /path/to/hadoop
 
 You need to change the path to the dataset in each file
 
-Preprocess data: run script in preprocess.ipynb
+Preprocess data: run script in [preprocess.ipynb] (/preprocess.ipynb)
 
 Select model and train:
 ```bash
@@ -56,7 +56,7 @@ python ngram_tfidf.py # For Ngram extractor and classifier (NB, LR, SVM)
 python ngram_evaluate.py # For evaluating F1 score
 ```
 For pretrained model: 
-Run script in pretrained_imdb.ipynb (for sentimentdl_use_imdb) or pretrained_use_twitter.ipynb (for sentimentdl_use_twitter)
+Run script in [pretrained_imdb.ipynb] (/pretrained_imdb.ipynb) (for sentimentdl_use_imdb) or [pretrained_use_twitter.ipynb] (/pretrained_use_twitter.ipynb) (for sentimentdl_use_twitter)
 
 Pretrained model can be found at spark-nlp models hub: https://sparknlp.org/models?task=Sentiment+Analysis
 
