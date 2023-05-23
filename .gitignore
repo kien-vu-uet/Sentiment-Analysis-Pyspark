@@ -1,2 +1,3 @@
 pipelines/*
-test.csv
+part2_900k.csv
+venv/*
