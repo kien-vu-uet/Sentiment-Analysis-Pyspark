@@ -7,7 +7,6 @@ Dataset: `Amazon book reviews`
 ## Installation
 
 **Note**:
-Note:
 The current version is only compatible with python>=3.6
 ```bash
 git clone https://github.com/kien-vu-uet/Sentiment-Analysis-Pyspark.git
