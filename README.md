@@ -20,17 +20,18 @@ The device needs to be pre-installed with Hadoop >= 3.3.1 and Spark >= 2.0
 
 ## Step 1: Prepare dataset
 
-Experimental example based on Amazon-book-reviews data pair of 900 comments:
-Push data to hdfs: 
-```bash
-hdfs dfs -copyFromLocal /home/team1/notebooks/amazon-books-reviews/part2_900k.csv /user/team1
-```
+Experimental example based on Amazon-book-reviews data pair of 900 comments
 
 Data includes reviews (`review/text`) and scores (`review/score`):
 
 | Data set               | Reviews    |                    Download                   |
 | :--------------------: | :--------: | :-------------------------------------------: |
 | Amazon-book-reviews    | 900,000    | via Kaggle in above link                      |
+
+Push data to hdfs: 
+```bash
+hdfs dfs -copyFromLocal /home/team1/notebooks/amazon-books-reviews/part2_900k.csv /user/team1
+```
 
 ## Step 2: Training models
 
