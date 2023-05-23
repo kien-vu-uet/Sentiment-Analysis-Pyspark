@@ -19,7 +19,7 @@ The device needs to be pre-installed with Hadoop >= 3.3.1 and Spark >= 2.0
 
 ## Step 1: Prepare dataset
 
-Experimental example based on `Amazon-book-reviews` dataset pair of 900 reviews
+Experimental example based on `Amazon-book-reviews` dataset pair of 900,000 reviews
 
 Data includes reviews (`review/text`) and scores (`review/score`):
 
