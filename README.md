@@ -19,13 +19,13 @@ The device needs to be pre-installed with Hadoop >= 3.3.1 and Spark >= 2.0
 
 ## Step 1: Prepare dataset
 
-Experimental example based on `Amazon-book-reviews` dataset pair of 900,000 reviews
+Experimental example based on `Amazon-book-reviews` dataset pair of 3,000,000 reviews
 
 Data includes reviews (`review/text`) and scores (`review/score`):
 
 | Data set               | Reviews    |                    Download                   |
 | :--------------------: | :--------: | :-------------------------------------------: |
-| Amazon-book-reviews    | 900,000    | via Kaggle in above link                      |
+| Amazon-book-reviews    | 3,000,000  | via Kaggle in above link                      |
 
 Push data to hdfs: 
 ```bash
