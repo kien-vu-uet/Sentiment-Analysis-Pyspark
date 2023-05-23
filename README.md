@@ -35,6 +35,8 @@ hdfs dfs -copyFromLocal /path/to/local/data /path/to/hadoop
 
 ## Step 2: Training models
 
+You need to change the path to the dataset in each file
+
 Preprocess data: run script in preprocess.ipynb
 
 Select model and train:
