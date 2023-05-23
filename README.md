@@ -20,7 +20,7 @@ The device needs to be pre-installed with Hadoop >= 3.3.1 and Spark >= 2.0
 
 ## Step 1: Prepare dataset
 
-Experimental example based on Amazon-book-reviews data pair of 900 comments
+Experimental example based on `Amazon-book-reviews` dataset pair of 900 reviews
 
 Data includes reviews (`review/text`) and scores (`review/score`):
 
@@ -37,7 +37,7 @@ hdfs dfs -copyFromLocal /path/to/local/data /path/to/hadoop
 
 You need to change the path to the dataset in each file
 
-Preprocess data: run script in preprocess.ipynb
+Preprocess data: run script in `preprocess.ipynb`
 
 Select model and train:
 ```bash
@@ -56,9 +56,9 @@ python ngram_tfidf.py # For Ngram extractor and classifier (NB, LR, SVM)
 python ngram_evaluate.py # For evaluating F1 score
 ```
 For pretrained model: 
-Run script in pretrained_imdb.ipynb (for `sentimentdl_use_imdb`) or pretrained_use_twitter.ipynb (for `sentimentdl_use_twitter`)
+Run script in `pretrained_imdb.ipynb` (for `sentimentdl_use_imdb`) or `pretrained_use_twitter.ipynb` (for `sentimentdl_use_twitter`)
 
-Pretrained model can be found at spark-nlp models hub: https://sparknlp.org/models?task=Sentiment+Analysis
+Pretrained model can be found at `spark-nlp models hub`: https://sparknlp.org/models?task=Sentiment+Analysis
 
 ## Step 3: Infer
 ```bash
