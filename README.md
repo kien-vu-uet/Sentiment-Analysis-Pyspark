@@ -56,7 +56,7 @@ python ngram_tfidf.py # For Ngram extractor and classifier (NB, LR, SVM)
 python ngram_evaluate.py # For evaluating F1 score
 ```
 For pretrained model: 
-Run script in pretrained_imdb.ipynb (for sentimentdl_use_imdb) or pretrained_use_twitter.ipynb (for sentimentdl_use_twitter)
+Run script in pretrained_imdb.ipynb (for `sentimentdl_use_imdb`) or pretrained_use_twitter.ipynb (for `sentimentdl_use_twitter`)
 
 Pretrained model can be found at spark-nlp models hub: https://sparknlp.org/models?task=Sentiment+Analysis
 
