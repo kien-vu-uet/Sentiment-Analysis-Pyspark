@@ -1,10 +1,12 @@
 
 # Export java11 to use
 import os
-os.environ['JAVA_HOME'] = '/home/nlplab/.jdk/jdk-11.0.19+7'
+os.environ['JAVA_HOME'] = '/home/team1/.jdk/jdk-11.0.19+7'
+os.environ["SPARK_HOME"] = "/opt/spark"
 
-
-# os.system('hdfs dfs -copyFromLocal /home/team1/notebooks/amazon-books-reviews/part2_900k.csv /user/team1')
+# import findspark and initialize it
+import findspark
+findspark.init("/opt/spark")
 
 
 # Import the necessary modules
@@ -35,7 +37,7 @@ spark = SparkSession.builder \
 # Assume the data has two columns: body and score
 # Score is an integer from 1 to 5
 print('READ DATASET...')
-data = spark.read.csv('test.csv', inferSchema=True, header=True, multiLine=True, quote='"', escape='"')
+data = spark.read.csv('part2_900k.csv', inferSchema=True, header=True, multiLine=True, quote='"', escape='"')
 data = data.select('review/score', (lower(regexp_replace('review/text', "[^a-zA-Z\\s]", "")).alias('review/text')))
 data = data.dropna()
 

@@ -1,5 +1,7 @@
-pyspark=3.0.0
-spark-nlp=3.0.0
+pyspark==3.0.0
+spark-nlp==3.0.0
 nltk
 pandas
+findspark
 # jdk 11 (manual install)
+# python 3.x
