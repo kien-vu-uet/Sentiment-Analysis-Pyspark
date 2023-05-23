@@ -35,18 +35,29 @@ hdfs dfs -copyFromLocal /path/to/local/data /path/to/hadoop
 
 ## Step 2: Training models
 
+Preprocess data: run script in preprocess.ipynb
+
 Select model and train:
 ```bash
 python tfidf.py # For TFIDF extractor and classifier (NB, LR, SVM)
 python tfidf_evaluate.py # For evaluating F1 score 
+
 # or
+
 python word2vec.py # For Word2vec extractor and classifier (LR, SVM)
 python word2vec_evaluate.py # For evaluating F1 score
+
 # or
+
 # First, run script in ngram_capture.ipynb
 python ngram_tfidf.py # For Ngram extractor and classifier (NB, LR, SVM)
 python ngram_evaluate.py # For evaluating F1 score
 ```
+For pretrained model: 
+Run script in pretrained_imdb.ipynb (for sentimentdl_use_imdb) or pretrained_use_twitter.ipynb (for sentimentdl_use_twitter)
+
+Pretrained model can be found at spark-nlp models hub: https://sparknlp.org/models?task=Sentiment+Analysis
+
 ## Step 3: Infer
 ```bash
    python infer.py --extractor=/your/choose --classifer=/your/choose --input=/path/to/your/txt/input --output=/path/to/your/txt/output
