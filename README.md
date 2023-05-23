@@ -30,7 +30,7 @@ Data includes reviews (`review/text`) and scores (`review/score`):
 
 Push data to hdfs: 
 ```bash
-hdfs dfs -copyFromLocal /home/team1/notebooks/amazon-books-reviews/part2_900k.csv /user/team1
+hdfs dfs -copyFromLocal /path/to/local/data /path/to/hadoop
 ```
 
 ## Step 2: Training models
