@@ -1,12 +1,8 @@
 
 # Export java11 to use
 import os
-os.environ['JAVA_HOME'] = '/home/team1/.jdk/jdk-11.0.19+7'
-os.environ["SPARK_HOME"] = "/opt/spark"
+os.environ['JAVA_HOME'] = '/home/nlplab/.jdk/jdk-11.0.19+7'
 
-# import findspark and initialize it
-import findspark
-findspark.init("/opt/spark")
 
 import argparse
 
@@ -90,20 +86,20 @@ if __name__ == "__main__":
         raise Exception("Naive Bayes cannot work with Word2Vec extractor!")
     else:
         if args.classifier == 'nb': 
-            my_list = [row['column_name'] for row in data.select('NB_prediction').collect()]
+            my_list = [row['NB_prediction'] for row in data.select('NB_prediction').collect()]
         elif args.classifier == 'lr':
-            my_list = [row['column_name'] for row in data.select('LR_prediction').collect()]
+            my_list = [row['LR_prediction'] for row in data.select('LR_prediction').collect()]
         else:
-            my_list = [row['column_name'] for row in data.select('SVM_prediction').collect()]
+            my_list = [row['SVM_prediction'] for row in data.select('SVM_prediction').collect()]
 
+    # print(my_list)
     # open a file for writing
     f = open(file_out, "w")
     # create an array
     # write each element to the file
-    for line in my_list:
-        print(*line, file=f)
+    print(*my_list, file=f)
     # close the file
     f.close()
 
-
+    spark.stop()
     
