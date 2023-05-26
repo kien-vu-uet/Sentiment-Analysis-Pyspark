@@ -62,4 +62,5 @@ Pretrained model can be found at `spark-nlp models hub`: https://sparknlp.org/mo
 ## Step 3: Infer
 ```bash
    python infer.py --extractor=/your/choose --classifer=/your/choose --input=/path/to/your/txt/input --output=/path/to/your/txt/output
+   # Example: python infer.py --extractor=ngram --classifier=lr --input="./input" --output="./output"
 ```
