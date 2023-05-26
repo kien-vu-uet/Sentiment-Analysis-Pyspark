@@ -1,8 +1,11 @@
-
 # Export java11 to use
 import os
-os.environ['JAVA_HOME'] = '/home/nlplab/.jdk/jdk-11.0.19+7'
+os.environ['JAVA_HOME'] = '/home/team1/.jdk/jdk-11.0.19+7'
+os.environ["SPARK_HOME"] = "/opt/spark"
 
+# import findspark and initialize it
+import findspark
+findspark.init("/opt/spark")
 
 import argparse
 
