@@ -99,12 +99,24 @@ nb_evaluator = MulticlassClassificationEvaluator(labelCol="review/score", predic
 nb_accuracy = nb_evaluator.evaluate(predictions)
 print(f"The accuracy of the model Naive Bayes is {nb_accuracy:0.2f}")
 
+nb_evaluator.setMetricName('f1')
+nb_f1 = nb_evaluator.evaluate(predictions)
+print(f"The f1 of the model Naive Bayes is {nb_f1:0.2f}")
+
 lr_evaluator = MulticlassClassificationEvaluator(labelCol="review/score", predictionCol="LR_prediction", metricName="accuracy")
 lr_accuracy = lr_evaluator.evaluate(predictions)
 print(f"The accuracy of the model Logistic Regression is {lr_accuracy:0.2f}")
 
+lr_evaluator.setMetricName('f1')
+lr_f1 = lr_evaluator.evaluate(predictions)
+print(f"The f1 of the model Logistic Regression is {nb_f1:0.2f}")
+
 svm_evaluator = MulticlassClassificationEvaluator(labelCol="review/score", predictionCol="SVM_prediction", metricName="accuracy")
 svm_accuracy = svm_evaluator.evaluate(predictions)
-print(f"The accuracy of the model SVM is {svm_accuracy:0.2f}")
+print(f"The accuracy of the model Linear SVM is {svm_accuracy:0.2f}")
+
+svm_evaluator.setMetricName('f1')
+svm_f1 = svm_evaluator.evaluate(predictions)
+print(f"The f1 of the model Linear SVM is {svm_f1:0.02f}")
 
 spark.stop()

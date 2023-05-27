@@ -107,12 +107,21 @@ evaluator = MulticlassClassificationEvaluator(labelCol="review/score", \
 accuracy = evaluator.evaluate(predictions)
 print(f"The accuracy of the model Logistic Regression is {accuracy:0.2f}")
 
+evaluator = MulticlassClassificationEvaluator(labelCol="review/score", \
+                    predictionCol="LR_prediction", metricName="f1")
+f1 = evaluator.evaluate(predictions)
+print(f"The f1 of the model Logistic Regression is {f1:0.2f}")
 
 # Evaluate the model performance
 evaluator = MulticlassClassificationEvaluator(labelCol="review/score", \
                     predictionCol="SVM_prediction", metricName="accuracy")
 accuracy = evaluator.evaluate(predictions)
 print(f"The accuracy of the model Linear SVM is {accuracy:0.2f}")
+
+evaluator = MulticlassClassificationEvaluator(labelCol="review/score", \
+                    predictionCol="SVM_prediction", metricName="f1")
+f1 = evaluator.evaluate(predictions)
+print(f"The f1 of the model Linear SVM is {f1:0.2f}")
 
 
 spark.stop()
